@@ -20,8 +20,8 @@ flux = abs(fs2 * k * fBO_1 * t_old);
 
 small = 10^-8;
 
-zsf_v = zeros(size(fcmplx(1).bc(:,1)));  
-zsf_v(fcmplx(1).bc(:,1) < minx3 + small) = 1;  
+zsf_v = zeros(size(fcmplx(1).bc(:,3)));  
+zsf_v(fcmplx(1).bc(:,3) < minx3 + small) = 1;  
 
 zsf_e = abs(fBO_1) * zsf_v;  
 zsf_e(zsf_e > 1) = 0;
