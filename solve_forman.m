@@ -8,11 +8,11 @@ y = fcmplx(1).bc(:,2);
 
 A = fCBS_1 * k * fBO_1; 
 
-int_indx = find(x ~= maxx3 & x ~= minx3);
+int_indx = find(z ~= maxx3 & z ~= minx3);
 
 t_old = zeros(fcmplx(1).num(1).val,1); 
-t_old(x == maxx3) = 1;
-rhs = -A * (x == maxx3);
+t_old(z == maxx3) = 1;
+rhs = -A * (z == maxx3);
 t_new = A(int_indx, int_indx) \ rhs(int_indx);
 t_old(int_indx) = t_new;
 
